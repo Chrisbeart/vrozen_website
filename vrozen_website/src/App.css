@@ -1,8 +1,8 @@
-body {
-  background-color: #FFF8DC;
-  font-family: Arial, sans-serif;
+body, html {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(255, 249, 197); /* Hintergrundfarbe */
 }
 
 .App {
@@ -11,35 +11,101 @@ body {
   min-height: 100vh;
 }
 
-.banner {
-  height: 200px;
+.App-header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #ddd; /* Placeholder background color */
 }
 
-.navbar {
+.banner {
+  width: 100%;
+  max-height: 200px; /* Höhe des Banners */
+  object-fit: cover;
+}
+
+.nav-bar {
   display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  background-color: #F0F0F0;
+  justify-content: center;
+  background-color: #e0e0e0;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Ermöglicht Zeilenumbruch */
 }
 
-.navbar a {
-  text-decoration: none;
+.nav-bar a {
+  margin: 5px 10px; /* Angepasst für kleinere Bildschirme */
   padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-color: #f0f0f0;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #E0E0E0;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  flex: 1; /* Gleichmäßige Verteilung der Links */
+  text-align: center; /* Zentriert Text */
+  min-width: 100px; /* Mindestbreite für kleine Bildschirme */
+}
+
+.nav-bar a:hover {
+  background-color: #ddd;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
 }
 
 .footer {
+  background-color: #e0e0e0;
+  padding: 10px;
   text-align: center;
-  padding: 20px;
-  background-color: #F0F0F0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column; /* Navigation in einer Spalte */
+    padding: 0;
+  }
+  
+  .nav-bar a {
+    margin: 5px 0;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    max-height: 150px; /* Kleinere Höhe für kleine Bildschirme */
+  }
+  
+  .nav-bar a {
+    margin: 3px 0;
+    padding: 8px;
+  }
+}
+
+/* Styles for Pferde component */
+.pferde-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pferde-bild {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.pferde-bild.hovered {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.pferde-bild.dimmed {
+  filter: brightness(0.5);
 }
