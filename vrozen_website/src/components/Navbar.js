@@ -1,18 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
 
-const Navbar = () => {
+const MyNavbar = () => {
+  const [showSubMenu, setShowSubMenu] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowSubMenu(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowSubMenu(false);
+  };
+
+  useEffect(() => {
+    // Smooth scrolling for anchor links
+    const handleClick = (event) => {
+      const anchor = event.target;
+      if (anchor.hash !== "") {
+        event.preventDefault();
+        const hash = anchor.hash;
+        document.querySelector(hash).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    const anchors = document.querySelectorAll('a.page-scroll');
+    anchors.forEach(anchor => anchor.addEventListener('click', handleClick));
+
+    return () => {
+      anchors.forEach(anchor => anchor.removeEventListener('click', handleClick));
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
-      <Link to="/">HOME</Link>
-      <Link to="/kontakt">Kontakt</Link>
-      <Link to="/events">Events</Link>
-      <Link to="/kurse">Kurse</Link>
-      <Link to="/bilder">Bilder</Link>
-      <Link to="/unsere-pferde">Unsere Pferde</Link>
-    </nav>
+    <Navbar fixed="top" bg="dark" variant="dark" expand="lg">
+      <Navbar.Brand as={Link} to="/">Brand</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link as={Link} to="/" className="page-scroll">HOME</Nav.Link>
+          <Nav.Link as={Link} to="/kontakt" className="page-scroll">Kontakt</Nav.Link>
+          <NavDropdown 
+            title="Events" 
+            id="basic-nav-dropdown" 
+            onMouseEnter={handleMouseEnter} 
+            onMouseLeave={handleMouseLeave}
+            show={showSubMenu}
+          >
+            <NavDropdown.Item as={Link} to="/events/event1" className="page-scroll">Event 1</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/events/event2" className="page-scroll">Event 2</NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link as={Link} to="/kurse" className="page-scroll">Kurse</Nav.Link>
+          <Nav.Link as={Link} to="/bilder" className="page-scroll">Bilder</Nav.Link>
+          <Nav.Link as={Link} to="/unsere-pferde" className="page-scroll">Unsere Pferde</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default MyNavbar;
