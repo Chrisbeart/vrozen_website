@@ -10,7 +10,7 @@ const Navbar = () => {
       <Link to="/events">Events</Link>
       <Link to="/kurse">Kurse</Link>
       <Link to="/bilder">Bilder</Link>
-      <Link to="/anfahrt">Anfahrt</Link>
+      <Link to="/unsere-pferde">Unsere Pferde</Link>
     </nav>
   );
 };
