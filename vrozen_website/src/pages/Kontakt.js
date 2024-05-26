@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Kontakt = () => {
   return (
     <div className="kontakt">
       <h1>Kontakt</h1>
-      {/* Add your content here */}
+      <Link to="/kontakt-detail">Go to Kontakt Detail</Link>
     </div>
   );
 };

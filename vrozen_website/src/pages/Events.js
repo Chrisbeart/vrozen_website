@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Events = () => {
   return (
     <div className="events">
       <h1>Events</h1>
-      {/* Add your content here */}
+      <Link to="/events-detail">Go to Events Detail</Link>
     </div>
   );
 };
