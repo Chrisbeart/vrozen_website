@@ -4,7 +4,8 @@
 }
 
 .horse-gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -15,7 +16,7 @@
   margin: 10px;
   overflow: hidden;
   border-radius: 50%;
-  transition: transform 0.6s ease;
+  transition: transform 0.8s ease;
 }
 
 .horse-card img {
@@ -27,6 +28,7 @@
 
 .horse-card:hover {
   transform: scale(1.8);
+  z-index: 1;
 }
 
 .horse-card p {
