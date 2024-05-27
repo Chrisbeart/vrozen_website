@@ -4,9 +4,16 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      IMPRESSUM
+      <div className="first-line">
+        DESIGNED BY:<br />
+        <div className="second-line">
+          Christopher Breunig<br />
+          Markus Heindle
+        </div>
+      </div>
     </footer>
   );
 };
+
 
 export default Footer;

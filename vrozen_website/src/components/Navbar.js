@@ -16,7 +16,6 @@ const MyNavbar = () => {
   };
 
   useEffect(() => {
-    // Smooth scrolling for anchor links
     const handleClick = (event) => {
       const anchor = event.target;
       if (anchor.hash !== "") {

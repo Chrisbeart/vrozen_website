@@ -1,9 +1,31 @@
 .footer {
     text-align: center;
-    padding: 20px;
-    background-color: #F0F0F0;
+    font-size: 7px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgb(143, 143, 143);
     position: fixed;
     width: 100%;
     bottom: 0;
-  }
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    line-height: normal;
+}
+
+.footer .first-line {
+  line-height: 10px;
+  padding: 0;
+  margin: 0;
+  color:beige;
+}
+
+.footer .second-line {
+  line-height: 7px;
+  padding: 0;
+  margin: 0;
+  color:black;
   
+}
