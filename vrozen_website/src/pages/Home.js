@@ -1,17 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './Bilder.css'
 
-const Home = () => {
+const Bilder = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  const images = [
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
+
+  ];
+
   return (
-    <div className="home">
-      <div className="banner">
-        <h1>Title Banner</h1>
-        <p>Some Name</p>
+    <div className="wrapper">
+      <div className="bilder">
+        <h1>Bilder</h1>
+        <Link to="/bilder-detail">Go to Bilder Detail</Link>
+        <div className="items">
+          {images.map((src, index) => (
+            <div
+              key={index}
+              className={`item ${activeIndex === index ? 'active' : ''}`}
+              style={{ backgroundImage: `url(${src})` }}
+              onClick={() => handleImageClick(index)}
+            ></div>
+          ))}
+        </div>
       </div>
-      <Link to="/home-detail">Go to Home Detail</Link>
     </div>
   );
 };
 
-export default Home;
+export default Bilder;
