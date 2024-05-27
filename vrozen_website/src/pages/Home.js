@@ -30,19 +30,20 @@ const Bilder = () => {
   ];
 
   return (
-    <div className="wrapper">
-      <div className="bilder">
-        <h1>Home Sweet Home</h1>
-
-        <div className="items">
-          {images.map((src, index) => (
-            <div
-              key={index}
-              className={`item ${activeIndex === index ? 'active' : ''}`}
-              style={{ backgroundImage: `url(${src})` }}
-              onClick={() => handleImageClick(index)}
-            ></div>
-          ))}
+    <div className="background-container">
+      <div className="wrapper">
+        <div className="bilder">
+          <h1>Home Sweet Home</h1>
+          <div className="items">
+            {images.map((src, index) => (
+              <div
+                key={index}
+                className={`item ${activeIndex === index ? 'active' : ''}`}
+                style={{ backgroundImage: `url(${src})` }}
+                onClick={() => handleImageClick(index)}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

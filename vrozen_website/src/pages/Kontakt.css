@@ -1,66 +1,131 @@
 /* src/pages/Kontakt.css */
 
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 .kontakt-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .kontakt-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    max-width: 1200px;
-    gap: 20px;
-  }
-  
-  .form-container,
-  .map-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .map-container {
-    position: relative; /* Stellt sicher, dass der Inhalt im Container bleibt */
-  }
-  
-  .oeffi {
-    margin-top: 0; /* Verhindert zusätzlichen Abstand oberhalb des Titels */
-  }
-  
-  .map-text {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .form-text {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .info-container {
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  /* Optional: Stil für den Link */
-  .kontakt-container a {
-    margin-top: 20px;
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  .kontakt-container a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.kontakt-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  background-color: #faf0d7; /* Hintergrundfarbe wie beim .ueber-mich-container */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form-container,
+.map-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+  position: relative; /* Stellt sicher, dass der Inhalt im Container bleibt */
+}
+
+.oeffi {
+  margin-top: 0; /* Verhindert zusätzlichen Abstand oberhalb des Titels */
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.map-text,
+.form-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+.info-container {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #0056b3; /* Grenzlinie für die Info-Box */
+}
+
+.info-container h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.info-container p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.kontakt-container a {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.kontakt-container a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Schatten für fokussierte Eingabefelder */
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Schatten für den Button beim Hover */
+}

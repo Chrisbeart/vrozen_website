@@ -1,105 +1,57 @@
-/* src/pages/uebermich.css */
+.ueber-mich-container {
+  background-color: #faf0d7;
+  color: #000;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 70%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-Shadow für den Container */
+}
 
-.über-mich-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .über-mich-container h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  
-  .image-container {
-    flex: 1;
-  }
-  
-  .profilbild {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .text-container {
-    flex: 2;
-  }
-  
-  .vorstellungstext {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: left;
-  }
-  
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .text-container {
-      text-align: center;
-    }
-  }
-/* src/pages/ÜberMich.css */
+.content {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
 
-.über-mich-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .über-mich-container h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  
-  .image-container {
-    flex: 1;
-  }
-  
-  .profilbild {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .text-container {
-    flex: 2;
-  }
-  
-  .vorstellungstext {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: left;
-  }
-  
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .text-container {
-      text-align: center;
-    }
-  }
-    
+.main-image {
+  flex: 0 0 450px; /* Größe des Hauptbilds vergrößert */
+  margin-right: 20px;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-Shadow für das Hauptbild */
+}
+
+.text {
+  flex: 1;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Text von oben nach unten anordnen */
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 150px; /* Größerer oberer Rand, um die Thumbnails weiter nach unten zu verschieben */
+}
+
+.thumbnails img {
+  width: 100px;
+  height: auto;
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-Shadow für Thumbnails */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Übergang für Hover-Effekt */
+}
+
+.thumbnails img:hover {
+  transform: scale(1.7);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Größere Box-Shadow beim Hover */
+}
