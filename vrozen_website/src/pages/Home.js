@@ -21,13 +21,6 @@ const Bilder = () => {
     'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
     'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
     'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
-    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
-    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
-    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
-    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
-    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
-    'https://www.ehorses.de/magazin/wp-content/uploads/mustang-pferderasse.jpg',
-    
   ];
 
   return (
