@@ -1,11 +1,12 @@
 .unsere-pferde {
   padding: 20px;
   text-align: center;
+  margin: 25%;
 }
 
 .horse-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   flex-wrap: wrap;
   justify-content: center;
 }
