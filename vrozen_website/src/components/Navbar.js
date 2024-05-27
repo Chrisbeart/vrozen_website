@@ -55,6 +55,8 @@ const MyNavbar = () => {
           <Nav.Link as={Link} to="/kurse" className="page-scroll">Kurse</Nav.Link>
           <Nav.Link as={Link} to="/bilder" className="page-scroll">Bilder</Nav.Link>
           <Nav.Link as={Link} to="/unsere-pferde" className="page-scroll">Unsere Pferde</Nav.Link>
+          <Nav.Link as={Link} to="/impressum" className="page-scroll">Impressum</Nav.Link>
+          <Nav.Link as={Link} to="/ueber-mich" className="page-scroll">Über mich</Nav.Link> {/* Neuer Link */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
