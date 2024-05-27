@@ -4,22 +4,22 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --index: calc(1vw + 1vh);
     --transition: cubic-bezier(.1, .7, 0, 1);
 }
 
-body{
+body {
     background-color: rgb(240, 234, 187);
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-    padding: 20 px;
+    padding: 20px; /* Korrigiert den padding-Wert */
 }
 
 .header {
@@ -39,13 +39,13 @@ body{
     width: 100%;
 }
 
-.items{
+.items {
     display: flex;
     gap: 1rem; /* Erhöht den Abstand zwischen den Bildern */
     perspective: calc(var(--index) * 35);
 }
 
-.item{
+.item {
     width: calc(var(--index) * 3);
     height: calc(var(--index) * 12);
     background-color: rgb(240, 234, 187);
@@ -55,6 +55,7 @@ body{
     filter: grayscale(1) brightness(.5);
     transition: transform 3s var(--transition), filter 2s var(--transition), width 0.5s var(--transition);
     will-change: transform, filter, rotateY, width;
+    margin: 0 1rem; /* Fügt zusätzlichen horizontalen Abstand zwischen den Bildern hinzu */
 }
 
 .item.active {
@@ -62,10 +63,10 @@ body{
     filter: inherit;
     z-index: 100;
     transform: translate3d(0, 0, calc(var(--index) * 10));
-    margin: 0 .45vw;
+    margin: 0 1.5rem; /* Erhöht den horizontalen Abstand, wenn das Bild aktiv ist */
 }
 
-.item::before, .item::after{
+.item::before, .item::after {
     content: '';
     position: absolute;
     height: 100%;
@@ -73,11 +74,11 @@ body{
     right: calc(var(--index) * -1);
 }
 
-.item::after{
+.item::after {
     left: calc(var(--index) * -1);
 }
 
-.items .item:hover{
+.items .item:hover {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * 10));
     z-index: 100;
@@ -85,52 +86,51 @@ body{
 
 /*Right*/
 
-.items .item:hover + *{
+.items .item:hover + * {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * 8.5)) rotateY(35deg);
     z-index: 99;
 }
 
-.items .item:hover + * + *{
+.items .item:hover + * + * {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * 5.6)) rotateY(40deg);
     z-index: 98;
 }
 
-.items .item:hover + * + * + *{
+.items .item:hover + * + * + * {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * 2.5)) rotateY(30deg);
     z-index: 97;
 }
 
-.items .item:hover + * + * + * + *{
+.items .item:hover + * + * + * + * {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * .6)) rotateY(15deg);
     z-index: 96;
 }
 
-
 /*Left*/
 
-.items .item:has( + :hover){
+.items .item:has(+ :hover) {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * 8.5)) rotateY(-35deg);
     z-index: 99;
 }
 
-.items .item:has( + * + :hover){
+.items .item:has(+ * + :hover) {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * 5.6)) rotateY(-40deg);
     z-index: 98;
 }
 
-.items .item:has( + * + * + :hover){
+.items .item:has(+ * + * + :hover) {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * 2.5)) rotateY(-30deg);
     z-index: 97;
 }
 
-.items .item:has( + * + * + * + :hover){
+.items .item:has(+ * + * + * + :hover) {
     filter: inherit;
     transform: translate3d(0, 0, calc(var(--index) * .6)) rotateY(-15deg);
     z-index: 96;
@@ -141,5 +141,5 @@ body{
     filter: inherit;
     z-index: 100;
     transform: translate3d(0, 0, calc(var(--index) * 10));
-    margin: 0 .45vw;
+    margin: 0 1.5rem; /* Erhöht den horizontalen Abstand, wenn das Bild aktiv ist */
 }
