@@ -21,7 +21,7 @@ const Kontakt = () => {
         <div className="map-container">
           <iframe
             title='map'
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.2573130090404!2d6.620470977034134!3d51.526840171817796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8978fd0da02a9%3A0x1ce2b032844eb0c6!2sIsabell%20Werth!5e0!3m2!1sde!2sde!4v1716812353387!5m2!1sde!2sde"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.8413912437903!2d11.181192803969989!3d47.87740276097242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dcaf5f08cad95%3A0x73d4894f08d34619!2sAlte%20M%C3%BCnchner%20Str.%2015%2C%2082407%20Wielenbach!5e0!3m2!1sde!2sde!4v1716825559949!5m2!1sde!2sde"
             width="100%"
             height="100%"
             style={{ border: 0 }}
