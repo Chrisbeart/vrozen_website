@@ -41,7 +41,7 @@ const MyNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link as={Link} to="/" className="page-scroll">HOME</Nav.Link>
-          <Nav.Link as={Link} to="/kontakt" className="page-scroll">Kontakt</Nav.Link>
+          <Nav.Link as={Link} to="/ueber-mich" className="page-scroll">Über mich</Nav.Link>
           <NavDropdown 
             title="Events" 
             id="basic-nav-dropdown" 
@@ -53,10 +53,9 @@ const MyNavbar = () => {
             <NavDropdown.Item as={Link} to="/events/event2" className="page-scroll">Event 2</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link as={Link} to="/kurse" className="page-scroll">Kurse</Nav.Link>
-          <Nav.Link as={Link} to="/bilder" className="page-scroll">Bilder</Nav.Link>
           <Nav.Link as={Link} to="/unsere-pferde" className="page-scroll">Unsere Pferde</Nav.Link>
+          <Nav.Link as={Link} to="/kontakt" className="page-scroll">Kontakt</Nav.Link>
           <Nav.Link as={Link} to="/impressum" className="page-scroll">Impressum</Nav.Link>
-          <Nav.Link as={Link} to="/ueber-mich" className="page-scroll">Über mich</Nav.Link> {/* Neuer Link */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
