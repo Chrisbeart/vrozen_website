@@ -38,7 +38,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px; /* Erhöht den Abstand zwischen den Thumbnails */
-  margin-top: 20px;
+  margin-top: 100px; /*Thumbnail Abstand zum Main Bild */
 }
 
 .card {

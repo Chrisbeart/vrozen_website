@@ -26,7 +26,7 @@ import UnserePferde5 from './pages/unserePferdeDetails/UnserePferde5';
 import UnserePferde6 from './pages/unserePferdeDetails/UnserePferde6';
 import UnserePferde7 from './pages/unserePferdeDetails/UnserePferde7';
 import UnserePferde8 from './pages/unserePferdeDetails/UnserePferde8';
-import UeberMich from './pages/UeberMich';  
+import UeberMich from './pages/Uebermich';  
 import './App.css';
 
 function App() {
