@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import MyNavbar from './components/Navbar';
 import Footer from './components/Footer';
 import Banner from './components/Banner';
 import Home from './pages/Home';
@@ -27,6 +27,7 @@ import UnserePferde5 from './pages/unserePferdeDetails/UnserePferde5';
 import UnserePferde6 from './pages/unserePferdeDetails/UnserePferde6';
 import UnserePferde7 from './pages/unserePferdeDetails/UnserePferde7';
 import UnserePferde8 from './pages/unserePferdeDetails/UnserePferde8';
+import UeberMich from './pages/UeberMich';  // Import der neuen Seite
 import './App.css';
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
     <Router>
       <div className="App">
         <Banner />
-        <Navbar />
+        <MyNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home-detail" element={<HomeDetail />} />
@@ -59,7 +60,6 @@ function App() {
           <Route path="/unsere-pferde8" element={<UnserePferde8 />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/impressum-detail" element={<ImpressumDetail />} />
-          <Route path="/uebermich" element={<Uebermich />} /> {/* Neue Route für ÜberMich */}
         </Routes>
         <Footer />
       </div>
