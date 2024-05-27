@@ -43,6 +43,7 @@ body {
     display: flex;
     gap: 1rem; /* Erhöht den Abstand zwischen den Bildern */
     perspective: calc(var(--index) * 35);
+    margin-top: 100px;
 }
 
 .item {
