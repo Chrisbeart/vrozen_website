@@ -1,22 +1,16 @@
 import React from 'react';
-import './Uebermich.css';
+import './UeberMich.css';
 import mainImage from '../assets/images/main.jpg'; // Beispielhafter Pfad zum Hauptbild
 import thumbnail1 from '../assets/images/thumb1.jpg'; // Beispielhafter Pfad zu den Thumbnails
 import thumbnail2 from '../assets/images/thumb2.jpg';
 import thumbnail3 from '../assets/images/thumb3.jpg';
 import thumbnail4 from '../assets/images/thumb4.jpg';
 import thumbnail5 from '../assets/images/thumb5.jpg';
-import thumbnail6 from '../assets/images/thumb6.jpg';
-import thumbnail7 from '../assets/images/thumb7.jpg';
-import thumbnail8 from '../assets/images/thumb8.jpg';
-import thumbnail9 from '../assets/images/thumb9.jpg';
-import thumbnail10 from '../assets/images/thumb10.jpg';
 
 const UeberMich = () => {
   return (
     <div className="ueber-mich-container">
       <h1>Über mich</h1>
-      <p>Hier können Sie Informationen über mich hinzufügen.</p>
       <div className="content">
         <div className="main-image">
           <img src={mainImage} alt="Hauptbild" />
@@ -26,20 +20,14 @@ const UeberMich = () => {
         </div>
       </div>
       <div className="thumbnails">
-        <img src={thumbnail1} alt="Thumbnail 1" />
-        <img src={thumbnail2} alt="Thumbnail 2" />
-        <img src={thumbnail3} alt="Thumbnail 3" />
-        <img src={thumbnail4} alt="Thumbnail 4" />
-        <img src={thumbnail5} alt="Thumbnail 5" />
-        <img src={thumbnail6} alt="Thumbnail 6" />
-        <img src={thumbnail7} alt="Thumbnail 7" />
-        <img src={thumbnail8} alt="Thumbnail 8" />
-        <img src={thumbnail9} alt="Thumbnail 9" />
-        <img src={thumbnail10} alt="Thumbnail 10" />
+        <div className="card"><img src={thumbnail1} alt="Thumbnail 1" /></div>
+        <div className="card"><img src={thumbnail2} alt="Thumbnail 2" /></div>
+        <div className="card"><img src={thumbnail3} alt="Thumbnail 3" /></div>
+        <div className="card"><img src={thumbnail4} alt="Thumbnail 4" /></div>
+        <div className="card"><img src={thumbnail5} alt="Thumbnail 5" /></div>
       </div>
     </div>
   );
 };
 
 export default UeberMich;
-

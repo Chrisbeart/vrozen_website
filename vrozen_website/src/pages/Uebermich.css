@@ -6,52 +6,80 @@
   width: 70%;
   margin: 20px auto;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-Shadow für den Container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  flex-direction: row; /* Ändert die Ausrichtung auf horizontal */
+  align-items: flex-start; /* Richtet die Items am Start aus */
+  gap: 20px;
 }
 
 .main-image {
-  flex: 0 0 450px; /* Größe des Hauptbilds vergrößert */
-  margin-right: 20px;
+  flex: 0 0 50%; /* Nimmt 50% des Containers ein */
+  max-width: 50%;
 }
 
 .main-image img {
   width: 100%;
-  height: auto;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-Shadow für das Hauptbild */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .text {
-  flex: 1;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Text von oben nach unten anordnen */
+  flex: 1; /* Nimmt den verbleibenden Platz ein */
+  text-align: left;
 }
 
 .thumbnails {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 150px; /* Größerer oberer Rand, um die Thumbnails weiter nach unten zu verschieben */
+  gap: 40px; /* Erhöht den Abstand zwischen den Thumbnails */
+  margin-top: 20px;
 }
 
-.thumbnails img {
-  width: 100px;
-  height: auto;
-  margin: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-Shadow für Thumbnails */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Übergang für Hover-Effekt */
+.card {
+  width: 190px;
+  height: 120px;
+  padding: 0.5rem;
+  background: rgba(198, 198, 198, 0.34);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+  border-left: 2px rgba(255, 255, 255, 0.545) outset;
+  box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+  transform: skewX(3deg);
+  transition: .6s;
+  overflow: hidden;
+  color: white;
 }
 
-.thumbnails img:hover {
-  transform: scale(1.7);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Größere Box-Shadow beim Hover */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card:hover {
+  height: 254px;
+  transform: skew(0deg);
+}
+
+.align {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-self: flex-start;
+}
+
+.card h1 {
+  text-align: center;
+  margin: 1.3rem;
+  color: rgb(218, 244, 237);
+  text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
 }
