@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="first-line">
         DESIGNED BY:<br />
         <div className="second-line">
-          Christopher Breunig<br />
-          Markus Heindle
+          Christopher Breunig | Markus Heindle<br />
+            Willy Ellwart | Stefan Henke
         </div>
       </div>
     </footer>
