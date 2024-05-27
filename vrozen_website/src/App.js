@@ -18,7 +18,6 @@ import BilderDetail from './pages/BilderDetail';
 import UnserePferde from './pages/UnserePferde';
 import Impressum from './pages/Impressum';
 import ImpressumDetail from './pages/ImpressumDetail';
-import Uebermich from './pages/Uebermich'; // Korrekter Import von Übermich
 import UnserePferde1 from './pages/unserePferdeDetails/UnserePferde1';
 import UnserePferde2 from './pages/unserePferdeDetails/UnserePferde2';
 import UnserePferde3 from './pages/unserePferdeDetails/UnserePferde3';
@@ -60,6 +59,7 @@ function App() {
           <Route path="/unsere-pferde8" element={<UnserePferde8 />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/impressum-detail" element={<ImpressumDetail />} />
+          <Route path="/ueber-mich" element={<UeberMich />} />  {/* Neue Route */}
         </Routes>
         <Footer />
       </div>
